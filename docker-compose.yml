@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: database-mysql-padrao-appcardapio
+    environment:
+      - MYSQL_DATABASE=appcardapio
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - '3306:3306'
+    expose:
+      - 3306
+    volumes:
+      - my-db:/var/lib/mysql
+volumes:
+  my-db:
+    driver: local

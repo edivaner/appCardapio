@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'LoginController@index')->name('site.index');
-Route::post('/', 'LoginController@logar')->name('site.logar');
+// Route::get('/', 'LoginController@index')->name('site.index');
+// Route::post('/', 'LoginController@logar')->name('site.logar');
+
+Route::resource('cliente', 'ClienteController');
